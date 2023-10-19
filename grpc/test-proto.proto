@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+message TestRequest {
+    string  TestReq = 1;
+}
+
+message TestResponse {
+    string TestRes = 1;
+}
+
+service TestService {
+    rpc TestServer (TestRequest) returns (TestResponse);
+    rpc TestStreamClientServer (stream TestRequest) returns (TestResponse);
+    rpc TestStreamServer(TestRequest) returns (stream TestResponse);
+    rpc TestBiDirectionalClientServer(stream TestRequest) returns (stream TestResponse);
+}
