@@ -12,6 +12,6 @@ MAX_IDLE_CONNECTION<br />
 REDIS_URL<br />
 
 ##### Docker command to buid & run the application.
-<l>docker build -t go-test<l/>
-<l>docker run -p 8000:8000 -it --rm go-test<l/>
+$ docker build -t go-test
+$ docker run -p 8000:8000 -it --rm go-test
 
