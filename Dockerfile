@@ -9,6 +9,8 @@ RUN go mod download
 # Copy every thing other than go.mod & go.sum
 COPY . ./
 
+#RUN rm -Rf ./.env
+
 # Build client & run
 RUN go build -o gs-c ./client
 RUN chmod +x ./gs-c
