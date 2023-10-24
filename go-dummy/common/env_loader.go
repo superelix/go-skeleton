@@ -7,7 +7,7 @@ import (
 var EnvMap map[string]string
 
 func init() {
-	err := godotenv.Load(ProjectRootPath() + ".env")
+	err := godotenv.Load(ProjectEnvPath() + ".env")
 	if err != nil {
 		GetLogger().Fatalf("Failed to load the environment variables, %s", err)
 		panic(err)

@@ -23,6 +23,12 @@ func ProjectRootPath() string {
 	return rootPath[0] + "/"
 }
 
+func ProjectEnvPath() string {
+	_, b, _, _ := runtime.Caller(0)
+	rootPath := strings.Split(filepath.Dir(b), "/go-dummy")
+	return rootPath[0] + "/"
+}
+
 func CreateUUID() string {
 	return uuid.NewV4().String()
 }
